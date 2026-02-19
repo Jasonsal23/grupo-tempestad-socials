@@ -3,6 +3,7 @@ import './App.css';
 import  Socials from './components/socials';
 import Foto from './components/images/grupo-foto.png';
 import Footer from './components/footer';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       </div>
       <Footer />
     </div>
+    <Analytics />
     </div>
   );
 }
