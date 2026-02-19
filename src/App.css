@@ -1,6 +1,6 @@
 @keyframes slideUp {
   from {
-    transform: translateY(100%);
+    transform: translateY(60px);
     opacity: 0;
   }
   to {
@@ -9,83 +9,207 @@
   }
 }
 
+
+.Background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at 0% 100%, rgba(180, 30, 0, 0.55) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 100%, rgba(180, 30, 0, 0.55) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 110%, rgba(220, 50, 0, 0.35) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 0%, rgba(60, 5, 0, 0.4) 0%, transparent 60%),
+    linear-gradient(180deg, #0d0000 0%, #180000 50%, #0d0000 100%);
+  z-index: 0;
+}
+
 .App {
   text-align: center;
-  animation: slideUp 2.5s ease; 
-  margin-top: -220px;
-}
-
-.Photo{
+  animation: slideUp 1.2s ease;
   position: relative;
-}
-
-.Foto {
-  width: 300px;
-  height: 300px;
-  border-radius: 5%;
-  border: solid 2px white;
-  margin: 50px;
-}
-
-.Icons{
-  border: solid 1px rgb(196, 227, 18);
-  margin: 10px;
-  border-radius: 5px;
-  padding: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.Icons:active {
-  background-color: lightgrey; 
-}
-
-.Icons .iconify {
-  font-size: 2rem; 
-  cursor: pointer;
-}
-
-.whatsapp{
+  z-index: 1;
+  padding: 50px 20px 30px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.whatsapp-number {
-  font-size: 12px;
+.Photo {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
-.Footer{
-  font-size: 15px;
+.Foto {
+  width: 270px;
+  height: 270px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 80, 0, 0.55);
+  box-shadow:
+    0 0 18px rgba(255, 60, 0, 0.5),
+    0 0 50px rgba(200, 20, 0, 0.3),
+    0 0 90px rgba(140, 8, 0, 0.15);
 }
 
 .Text {
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+}
+
+.Text h1 {
+  font-family: 'Cinzel', serif;
+  font-weight: 900;
+  font-size: 3rem;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #e4e4e4 20%,
+    #c0c0c0 45%,
+    #909090 70%,
+    #606060 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter:
+    drop-shadow(0 0 8px rgba(255, 70, 0, 0.65))
+    drop-shadow(0 0 22px rgba(200, 25, 0, 0.35))
+    drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.98));
+  letter-spacing: 5px;
+  margin: 0 0 10px;
+}
+
+.Text p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 145, 75, 0.8);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.Socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 10px;
+  margin-bottom: 44px;
+}
+
+.Icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 75, 0, 0.35);
+  border-radius: 10px;
+  padding: 18px 20px 14px;
+  cursor: pointer;
+  transition: all 0.28s ease;
+  background: rgba(255, 30, 0, 0.04);
+  min-width: 68px;
+}
+
+.Icons:hover {
+  background: rgba(255, 55, 0, 0.14);
+  border-color: rgba(255, 100, 0, 0.75);
+  box-shadow:
+    0 0 14px rgba(255, 60, 0, 0.3),
+    0 0 30px rgba(200, 20, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.Icons:active {
+  transform: translateY(-1px);
+  background: rgba(255, 55, 0, 0.22);
+}
+
+.Icons .iconify {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.social-heading {
+  display: none;
+}
+
+.icon-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.6rem;
+  color: rgba(255, 195, 140, 0.7);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.whatsapp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.whatsapp-number {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.6rem;
+  color: rgba(255, 195, 140, 0.7);
+  letter-spacing: 0.5px;
+}
+
+.Footer {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.72rem;
+  color: rgba(255, 120, 60, 0.35);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 50, 0, 0.12);
+  width: 100%;
+  max-width: 420px;
+}
+
+.Footer p {
+  margin: 8px 0;
 }
 
 @media (max-width: 600px) {
-  .Text {
-    font-size: 1.2rem; 
+  .Text h1 {
+    font-size: 2.2rem;
+    letter-spacing: 3px;
   }
-}
 
-.Background {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 220px; 
-  background-color: black; 
-  z-index: 1; 
-  animation: slideUp 2.5s ease;
-}
+  .Foto {
+    width: 230px;
+    height: 230px;
+  }
 
+  .Socials {
+    gap: 10px;
+    padding: 0;
+  }
 
-.App,
-.Photo,
-.Text,
-.Socials,
-.Footer {
-  position: relative;
-  z-index: 2; 
+  .social-heading {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7rem;
+    color: rgba(255, 195, 140, 0.6);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 6px 0 2px;
+  }
+
+  .social-heading:first-child {
+    margin-top: 0;
+  }
+
+  .Icons {
+    /* force exactly 3 per row — last 2 center automatically via justify-content: center */
+    flex: 0 0 calc((100% - 20px) / 3);
+    padding: 14px 8px 11px;
+    min-width: unset;
+  }
 }

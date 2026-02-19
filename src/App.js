@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 import  Socials from './components/socials';
-import Foto from './components/images/grupo-foto.jpg';
+import Foto from './components/images/grupo-foto.png';
 import Footer from './components/footer';
 
 function App() {
 
   return (
     <div>
-    <div className="Background"></div>
+    <div className="Background" />
     <div className="App">
       <div className="Photo">
         <img className="Foto" src={Foto} alt="Grupo Tempestad" />
