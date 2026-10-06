@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import  Socials from './components/socials';
-import Foto from './components/images/grupo-foto.png';
+import Foto from './components/images/grupo-foto.jpeg';
 import Footer from './components/footer';
 import { Analytics } from '@vercel/analytics/react';
 
