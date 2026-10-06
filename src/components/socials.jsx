@@ -8,37 +8,33 @@ const youtube = "https://www.youtube.com/watch?v=gBCjO9BkctA";
 const whatsapp = "https://api.whatsapp.com/send?phone=7022095174";
 
 export default function Socials() {
-  const openLinkInNewTab = (link) => {
-    window.open(link, '_blank');
-  };
-
   return (
     <div className="Socials">
       <span className="social-heading">Para contrataciones, contáctanos</span>
-      <div className="Icons" onClick={() => openLinkInNewTab(whatsapp)}>
+      <a className="Icons" href={whatsapp} target="_blank" rel="noopener noreferrer">
         <Icon icon="logos:whatsapp-icon" />
         <div className="whatsapp">
           <span className="icon-label">WhatsApp</span>
           <span className="whatsapp-number">(702) 209-5174</span>
         </div>
-      </div>
+      </a>
       <span className="social-heading">Síguenos en nuestras redes sociales</span>
-      <div className="Icons" onClick={() => openLinkInNewTab(tiktok)}>
+      <a className="Icons" href={tiktok} target="_blank" rel="noopener noreferrer">
         <Icon icon="logos:tiktok-icon" />
         <span className="icon-label">TikTok</span>
-      </div>
-      <div className="Icons" onClick={() => openLinkInNewTab(instagram)}>
+      </a>
+      <a className="Icons" href={instagram} target="_blank" rel="noopener noreferrer">
         <Icon icon="skill-icons:instagram" />
         <span className="icon-label">Instagram</span>
-      </div>
-      <div className="Icons" onClick={() => openLinkInNewTab(facebook)}>
+      </a>
+      <a className="Icons" href={facebook} target="_blank" rel="noopener noreferrer">
         <Icon icon="logos:facebook" />
         <span className="icon-label">Facebook</span>
-      </div>
-      <div className="Icons" onClick={() => openLinkInNewTab(youtube)}>
+      </a>
+      <a className="Icons" href={youtube} target="_blank" rel="noopener noreferrer">
         <Icon icon="logos:youtube-icon" />
         <span className="icon-label">YouTube</span>
-      </div>
+      </a>
     </div>
   );
 }

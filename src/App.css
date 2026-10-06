@@ -40,12 +40,15 @@
 .Photo {
   position: relative;
   display: inline-block;
+  width: 100%;
+  max-width: 520px;
   margin-bottom: 10px;
 }
 
 .Foto {
-  width: 270px;
-  height: 270px;
+  display: block;
+  width: 100%;
+  height: auto;
   border-radius: 8px;
   border: 2px solid rgba(255, 80, 0, 0.55);
   box-shadow:
@@ -111,6 +114,7 @@
   transition: all 0.28s ease;
   background: rgba(255, 30, 0, 0.04);
   min-width: 68px;
+  text-decoration: none;
 }
 
 .Icons:hover {
@@ -179,11 +183,6 @@
     font-size: clamp(1.3rem, 5.5vw, 2.2rem);
     letter-spacing: clamp(2px, 0.8vw, 5px);
     white-space: nowrap;
-  }
-
-  .Foto {
-    width: 230px;
-    height: 230px;
   }
 
   .Socials {

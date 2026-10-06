@@ -16,7 +16,7 @@ function App() {
       </div>
       <div className="Text">
         <h1>GRUPO TEMPESTAD</h1>
-        <p>Las Vegas, NV</p>
+        <p>Grupo Norteño · Las Vegas, NV</p>
       </div>
       <div className="Social">
       <Socials />
